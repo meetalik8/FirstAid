@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fracture Management Quiz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: #1D1D1D; /* Dark red background */
+            color: #EAEFD3; /* Light color for text */
+            font-size: 20px; /* Increased font size */
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 30px;
+            background-color: #7F1414; /* Dark red background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .question {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .btn-submit {
+            margin-top: 20px;
+            background-color: #EAEFD3; /* Light color for button */
+            color: #7F1414; /* Dark red text for button */
+        }
+        .btn-skip {
+            margin-top: 20px;
+            background-color: #1D1D1D; /* Darker background for skip button */
+            color: #EAEFD3; /* Light color for text */
+        }
+        h1 {
+            color: #EAEFD3; /* Light color for heading */
+        }
+        .navbar {
+            background-color: #7F1414;
+            color: #EAEFD3;
+            font-size: 20px;
+            border: #7F1414;
+            padding: 10px;
+        }
+        .navbar-brand {
+            font-size: 20px;
+            color: #EAEFD3;
+        }
+        .navbar-nav li a {
+            color: #EAEFD3 !important;
+        }
+        .navbar-nav li a:hover {
+            color: #1D1D1D !important;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="color: #EAEFD3;">First Aid</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html" class="nav-link">Basics</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="information.html" class="nav-link">Information</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<div class="container">
+    <h1 class="text-center">Fracture Management Quiz</h1>
+    <div id="quizCard" class="card">
+        <div class="card-body">
+            <form id="quizForm">
+                <div id="questionContainer"></div>
+                <button type="button" class="btn btn-primary btn-submit" onclick="submitAnswer()">Submit Answer</button>
+                <button type="button" class="btn btn-warning btn-skip" onclick="skipQuestion()">Skip Question</button>
+            </form>
+            <div id="result" class="text-center" style="margin-top: 20px;"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const questions = [
+        { question: "What is a closed fracture?", options: ["A. A fracture where the skin is intact", "B. A fracture that pierces through the skin", "C. A fracture that is completely broken into pieces", "D. A fracture occurring in children"], answer: "A" },
+        { question: "What is the most common symptom of a fracture?", options: ["A. Nausea", "B. Pain at the injury site", "C. Fever", "D. Headache"], answer: "B" },
+        { question: "What is the first step in managing a suspected fracture?", options: ["A. Move the person to a comfortable position", "B. Immobilize the injured area", "C. Apply ice directly to the fracture", "D. Give the person pain medication"], answer: "B" },
+        { question: "What should you do if you suspect a fracture in the arm?", options: ["A. Pull on the arm to realign it", "B. Use a splint to immobilize the arm", "C. Allow the person to use the arm as much as possible", "D. Apply heat to the injury"], answer: "B" },
+        { question: "When should you seek medical help for a fracture?", options: ["A. Only for open fractures", "B. If there is severe pain or deformity", "C. Fractures do not need medical attention", "D. If there is swelling only"], answer: "B" }
+    ];
+
+    let currentQuestionIndex = 0;
+    let score = 0;
+
+    function displayQuestion() {
+        if (currentQuestionIndex < questions.length) {
+            const questionData = questions[currentQuestionIndex];
+            const questionHtml = `
+                <div class="question">${questionData.question}</div>
+                ${questionData.options.map((option) => `
+                    <label><input type="radio" name="answer" value="${option.charAt(0)}"> ${option}</label><br>
+                `).join('')}
+            `;
+            document.getElementById("questionContainer").innerHTML = questionHtml;
+        } else {
+            showResult();
+        }
+    }
+
+    function submitAnswer() {
+        const selected = document.querySelector('input[name="answer"]:checked');
+        // Check if the answer is correct
+        if (selected && selected.value === questions[currentQuestionIndex].answer.charAt(0)) {
+            score++;  // Increment score for correct answer
+        }
+        currentQuestionIndex++;  // Move to next question
+        displayQuestion();  // Show the next question
+    }
+
+    function skipQuestion() {
+        currentQuestionIndex++;  // Move to the next question without changing score
+        displayQuestion();  // Show the next question
+    }
+
+    function showResult() {
+        document.getElementById('questionContainer').style.display = 'none';  
+        document.getElementById('result').innerHTML = `You scored ${score} out of ${questions.length}!`;  // Show final score
+    }
+
+    displayQuestion();  // Start the quiz by displaying the first question
+</script>
+
+</body>
+</html>

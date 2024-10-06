@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bleeding Control Information</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Vollkorn" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: #1D1D1D;
+            font-family: 'Poppins', 'sans-serif';
+        }
+        .navbar {
+            background-color: #7F1414;
+            color: #EAEFD3;
+            font-size: 20px;
+            border: #7F1414;
+            padding: 10px;
+        }
+        .navbar-brand {
+            font-size: 20px;
+            color: #EAEFD3;
+        }
+        .navbar-nav li a {
+            color: #EAEFD3 !important;
+        }
+        .navbar-nav li a:hover {
+            color: #1D1D1D !important;
+        }
+        .jumbotron {
+            background-color: #EAEFD3;
+        }
+        .jumbotron p {
+            color: #7F1414;
+        }
+        .card {
+            background-color: #7F1414;
+            padding: 20px;
+            color: #EAEFD3;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .basics-section {
+            border-radius: 15px;
+            padding-left: 20px;
+            color: #EAEFD3;
+            background-color: #7F1414;
+            padding-bottom: 30px;
+            display: flex;
+        }
+        .basics-section p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Bleeding Control</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html" class="nav-link">Basics</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="information.html" class="nav-link">Information</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Bleeding Control Information</h1>
+            <p>Learn essential techniques for controlling bleeding in emergencies.</p>
+        </div>
+    </div>
+
+    <div class="container" id="basics">
+        <h1 class="text-center" style="color: #EAEFD3;">Bleeding Control Basics</h1>
+        <div class="row basics-section">
+            <div class="col-sm-8">
+                <h2>What is Bleeding Control?</h2>
+                <p>Bleeding control refers to the techniques used to stop or reduce blood loss from an injury. Timely and effective bleeding control can save lives and prevent shock.</p>
+
+                <h2>Types of Bleeding</h2>
+                <ul>
+                    <li><strong>Arterial Bleeding:</strong> Bright red, spurting blood from an artery, typically life-threatening.</li>
+                    <li><strong>Venous Bleeding:</strong> Dark red, steady blood flow from a vein, can be serious but is often less urgent.</li>
+                    <li><strong>Capillary Bleeding:</strong> Slow, oozing blood from small blood vessels, usually minor and manageable.</li>
+                </ul>
+
+                <h2>Importance of Bleeding Control</h2>
+                <p>Effective bleeding control is crucial to prevent excessive blood loss, reduce the risk of shock, and promote better outcomes for the injured person.</p>
+            </div>
+            <div>
+                <img src="static/bleeding.png" class="img-responsive img-left" alt="Bleeding Control Illustration" width="350px" style="padding-top: 20px;">
+            </div>
+        </div>
+
+        <div class="data" style="color: #EAEFD3;">
+            <h2>First Aid for Bleeding Control</h2>
+            <h3>Steps for Minor Bleeding</h3>
+            <ol>
+                <li>Wash your hands and wear gloves if available.</li>
+                <li>Apply direct pressure to the wound using a clean cloth or bandage.</li>
+                <li>Keep applying pressure until the bleeding stops.</li>
+            </ol>
+
+            <h3>Steps for Severe Bleeding</h3>
+            <ol>
+                <li>Call emergency services immediately.</li>
+                <li>Apply firm pressure directly on the wound with a clean cloth or bandage.</li>
+                <li>If blood soaks through, do not remove the original cloth; instead, add more layers on top.</li>
+                <li>Elevate the injured area above the level of the heart if possible.</li>
+            </ol>
+
+            <h3>Steps for Arterial Bleeding</h3>
+            <ol>
+                <li>Call emergency services immediately.</li>
+                <li>Apply direct pressure to the wound.</li>
+                <li>If bleeding continues, use a tourniquet above the wound site if trained to do so.</li>
+                <li>Monitor the person's condition until help arrives.</li>
+            </ol>
+
+            <h2>Conclusion</h2>
+            <p>Knowing how to control bleeding can significantly impact the outcome in emergency situations. Always prioritize safety and call for help when necessary.</p>
+            <button><a href="bleedingquiz.html">Take the quiz!</a></button>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fracture Information</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Vollkorn" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: #1D1D1D;
+            font-family: 'Poppins', 'sans-serif';
+        }
+        .navbar {
+            background-color: #7F1414;
+            color: #EAEFD3;
+            font-size: 20px;
+            border: #7F1414;
+            padding: 10px;
+        }
+        .navbar-brand {
+            font-size: 20px;
+            color: #EAEFD3;
+        }
+        .navbar-nav li a {
+            color: #EAEFD3 !important;
+        }
+        .navbar-nav li a:hover {
+            color: #1D1D1D !important;
+        }
+        .jumbotron {
+            background-color: #EAEFD3;
+        }
+        .jumbotron p {
+            color: #7F1414;
+        }
+        .card {
+            background-color: #7F1414;
+            padding: 20px;
+            color: #EAEFD3;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .basics-section {
+            border-radius: 15px;
+            padding-left: 20px;
+            color: #EAEFD3;
+            background-color: #7F1414;
+            padding-bottom: 30px;
+            display: flex;
+        }
+        .basics-section p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Fracture Management</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html" class="nav-link">Basics</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="information.html" class="nav-link">Information</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Fracture Information</h1>
+            <p>Essential details on fractures, their types, symptoms, and how to manage them effectively.</p>
+        </div>
+    </div>
+
+    <div class="container" id="basics">
+        <h1 class="text-center" style="color: #EAEFD3;">Fracture Basics</h1>
+        <div class="row basics-section">
+            <div class="col-sm-8">
+                <h2>What is a Fracture?</h2>
+                <p>A fracture is a break in the continuity of a bone. It can occur due to trauma, such as falls, accidents, or overuse injuries. Understanding fractures is crucial for effective treatment and recovery.</p>
+
+                <h2>Types of Fractures</h2>
+                <ul>
+                    <li><strong>Closed Fracture:</strong> The skin remains intact, and the bone is broken but does not protrude through the skin.</li>
+                    <li><strong>Open Fracture:</strong> The broken bone pierces through the skin, increasing the risk of infection.</li>
+                    <li><strong>Complete Fracture:</strong> The bone is broken into two or more pieces.</li>
+                    <li><strong>Incomplete Fracture:</strong> The bone cracks but does not break all the way through.</li>
+                    <li><strong>Greenstick Fracture:</strong> Common in children, where the bone bends and cracks on one side.</li>
+                </ul>
+
+                <h2>Importance of Managing Fractures</h2>
+                <p>Proper management of fractures is crucial to ensure healing and restore function. Early intervention can prevent complications such as infection, improper healing, or long-term disabilities.</p>
+            </div>
+            <div>
+                <img src="static/fracture.webp" class="img-responsive img-left" alt="Fracture Illustration" width="350px" style="padding-top: 20px;">
+            </div>
+        </div>
+
+        <div class="data" style="color: #EAEFD3;">
+        <h2>Managing Fractures</h2>
+        <h3>First Aid Steps for Fractures</h3>
+        <ol>
+            <li>Ensure the scene is safe and assess the injury.</li>
+            <li>Call for emergency help if necessary.</li>
+            <li>Do not move the person unless there is a danger of further injury.</li>
+            <li>If possible, immobilize the fracture by supporting the affected area with a splint or padding.</li>
+            <li>Apply ice packs to reduce swelling, but do not apply ice directly to the skin.</li>
+            <li>Monitor the person for shock and keep them calm until help arrives.</li>
+        </ol>
+
+        <h3>Medical Treatment for Fractures</h3>
+        <ol>
+            <li>Consult a medical professional for diagnosis through X-rays.</li>
+            <li>Treatment may involve immobilization with a cast or splint.</li>
+            <li>In some cases, surgery may be necessary to realign the bones.</li>
+            <li>Physical therapy may be recommended to regain strength and mobility after healing.</li>
+        </ol>
+
+        <h2>Conclusion</h2>
+        <p>Understanding fractures and their management can significantly impact recovery and overall health. Timely and appropriate treatment is essential for optimal healing.</p>
+        </div>
+        <button><a href="fracturequiz.html">Take the quiz!</a></button>
+    </div>
+</body>
+</html>

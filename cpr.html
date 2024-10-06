@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPR Information</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Vollkorn" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: #1D1D1D;
+            font-family: 'Poppins', 'sans-serif';
+        }
+        .navbar {
+            background-color: #7F1414;
+            color: #EAEFD3;
+            font-size: 20px;
+            border: #7F1414;
+            padding: 10px;
+        }
+        .navbar-brand {
+            font-size: 20px;
+            color: #EAEFD3;
+        }
+        .navbar-nav li a {
+            color: #EAEFD3 !important;
+        }
+        .navbar-nav li a:hover {
+            color: #1D1D1D !important;
+        }
+        .jumbotron {
+            background-color: #EAEFD3;
+        }
+        .jumbotron p {
+            color: #7F1414;
+        }
+        .card {
+            background-color: #7F1414;
+            padding: 20px;
+            color: #EAEFD3;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .basics-section {
+            border-radius: 15px;
+            padding-left: 20px;
+            color: #EAEFD3;
+            background-color: #7F1414;
+            padding-bottom: 30px;
+            display: flex;
+        }
+        .basics-section p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">CPR Training</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html" class="nav-link">Basics</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="information.html" class="nav-link">Information</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron">
+        <div class="container">
+            <h1>CPR Information</h1>
+            <p>Comprehensive details on CPR techniques, importance, and steps to perform it correctly.</p>
+        </div>
+    </div>
+
+    <div class="container" id="basics">
+        <h1 class="text-center" style="color: #EAEFD3;">CPR Basics</h1>
+        <div class="row basics-section">
+            <div class="col-sm-8">
+                <h2>What is CPR?</h2>
+                <p>Cardiopulmonary resuscitation (CPR) is a life-saving technique used in emergencies when someone's breathing or heartbeat has stopped. It is vital for people experiencing cardiac arrest, where immediate action can save a life.</p>
+
+                <h2>Types of CPR</h2>
+                <ul>
+                    <li><strong>Hands-only CPR:</strong> Involves calling for help and performing rapid chest compressions without rescue breaths.</li>
+                    <li><strong>Traditional CPR:</strong> Alternates chest compressions with mouth-to-mouth breaths, providing oxygen to the body.</li>
+                </ul>
+
+                <h2>Importance of CPR</h2>
+                <p>CPR performed within the first few minutes of the heart stopping can keep someone alive until medical help arrives. Hands-only CPR is recommended for untrained individuals.</p>
+            </div>
+            <div>
+                <img src="static/cpr.webp" class="img-responsive img-left" alt="CPR Illustration" width="350px" style="padding-top: 20px;">
+            </div>
+        </div>
+
+        <div class="data" style="color: #EAEFD3;">
+        <h2>Performing CPR</h2>
+        <h3>Steps for Hands-only CPR</h3>
+        <ol>
+            <li>Survey the scene to ensure safety.</li>
+            <li>Check for responsiveness by tapping the person and shouting.</li>
+            <li>If unresponsive, call emergency services.</li>
+            <li>Place the person on a firm, flat surface.</li>
+            <li>Begin chest compressions at a rate of 100 to 120 compressions per minute.</li>
+            <li>Continue compressions until help arrives or the person starts breathing.</li>
+        </ol>
+
+        <h3>Steps for CPR with Breaths</h3>
+        <ol>
+            <li>Perform 30 chest compressions.</li>
+            <li>Open the airway by tilting the head back and lifting the chin.</li>
+            <li>Give two rescue breaths, ensuring the chest rises.</li>
+            <li>Continue alternating between 30 compressions and 2 breaths.</li>
+        </ol>
+
+        <h2>Conclusion</h2>
+        <p>Understanding CPR and being able to perform it can save lives. Regular training and practice are essential to stay prepared for emergencies.</p>
+        <button><a href="cprquiz.html">Take the quiz!</a></button>
+        </div>
+    </div>
+</body>
+</html>
